@@ -16,7 +16,7 @@ func main() {
 	const nama1 = "fauzi"
 	const nama2 = "jono"
 
-	var result bool = nama1 != nama2
+	var result bool = nama1 < nama2
 
 	fmt.Println(result)
 	fmt.Println(c)
