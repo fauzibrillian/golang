@@ -7,6 +7,14 @@ type Customer struct {
 	Age           int
 }
 
+func (customer Customer) sayHi(Nama string) {
+	fmt.Println("hello", Nama, "my name is ", customer.Nama)
+}
+
+func (a Customer) sayHu() {
+	fmt.Println("Huuuu dari", a.Nama)
+}
+
 func main() {
 	var eko Customer
 
@@ -14,20 +22,23 @@ func main() {
 	eko.Address = "Jawa Timur"
 	eko.Age = 23
 
-	fmt.Println(eko.Nama)
-	fmt.Println(eko.Address)
-	fmt.Println(eko.Age)
+	eko.sayHi("Joko")
+	eko.sayHu()
 
-	joko := Customer{
-		Nama:    "Joko",
-		Address: "Jawa Tengah",
-		Age:     25,
-	}
-	fmt.Println(joko.Nama)
-	fmt.Println(joko.Address)
-	fmt.Println(joko.Age)
+	// fmt.Println(eko.Nama)
+	// fmt.Println(eko.Address)
+	// fmt.Println(eko.Age)
 
-	budi := Customer{"Budi", "Jakarta", 25}
-	fmt.Println(budi)
+	// joko := Customer{
+	// 	Nama:    "Joko",
+	// 	Address: "Jawa Tengah",
+	// 	Age:     25,
+	// }
+	// fmt.Println(joko.Nama)
+	// fmt.Println(joko.Address)
+	// fmt.Println(joko.Age)
+
+	// budi := Customer{"Budi", "Jakarta", 25}
+	// fmt.Println(budi)
 
 }
